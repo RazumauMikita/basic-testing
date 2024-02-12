@@ -63,9 +63,8 @@ describe('BankAccount', () => {
     jest.spyOn(lodash, 'random').mockReturnValue(1);
 
     const bankAccount = getBankAccount(initialBalance);
-    let result;
 
-    result = await bankAccount.fetchBalance();
+    const result = await bankAccount.fetchBalance();
     expect(typeof result).toBe('number');
   });
 
